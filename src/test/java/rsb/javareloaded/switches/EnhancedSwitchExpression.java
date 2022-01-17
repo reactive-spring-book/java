@@ -5,21 +5,23 @@ import org.junit.jupiter.api.Test;
 
 class EnhancedSwitchExpression {
 
-    @Test
-    void switchExpression() {
-        Assertions.assertEquals(respondToEmotionalState(Emotion.HAPPY), "that's wonderful.");
-        Assertions.assertEquals(respondToEmotionalState(Emotion.SAD), "I'm so sorry to hear that.");
-    }
+	@Test
+	void switchExpression() {
+		Assertions.assertEquals(respondToEmotionalState(Emotion.HAPPY), "that's wonderful.");
+		Assertions.assertEquals(respondToEmotionalState(Emotion.SAD), "I'm so sorry to hear that.");
+	}
 
-    private String respondToEmotionalState(Emotion emotion) {
-        return switch (emotion) {
-            case HAPPY -> "that's wonderful.";
-            case SAD -> "I'm so sorry to hear that.";
-        };
-    }
+	private String respondToEmotionalState(Emotion emotion) {
+		return switch (emotion) {
+		case HAPPY -> "that's wonderful.";
+		case SAD -> "I'm so sorry to hear that.";
+		};
+	}
 
-    enum Emotion {
-        HAPPY, SAD;
-    }
+	enum Emotion {
+
+		HAPPY, SAD;
+
+	}
 
 }

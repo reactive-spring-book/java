@@ -10,23 +10,23 @@ import java.io.IOException;
 
 class TryWithResources {
 
-    private final File file = Utils.setup();
+	private final File file = Utils.setup();
 
-    @Test
-    void tryWithResources() {
-        try (var fileReader = new FileReader(this.file);
-             var bufferedReader = new BufferedReader(fileReader)) {
-            var stringBuilder = new StringBuilder();
-            var line = (String) null;
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuilder.append(line);
-                stringBuilder.append(System.lineSeparator());
-            }
-            var contents = stringBuilder.toString().trim();
-            Assertions.assertEquals(contents, Utils.CONTENTS);
-        } //
-        catch (IOException e) {
-            Utils.error(e);
-        }
-    }
+	@Test
+	void tryWithResources() {
+		try (var fileReader = new FileReader(this.file); var bufferedReader = new BufferedReader(fileReader)) {
+			var stringBuilder = new StringBuilder();
+			var line = (String) null;
+			while ((line = bufferedReader.readLine()) != null) {
+				stringBuilder.append(line);
+				stringBuilder.append(System.lineSeparator());
+			}
+			var contents = stringBuilder.toString().trim();
+			Assertions.assertEquals(contents, Utils.CONTENTS);
+		} //
+		catch (IOException e) {
+			Utils.error(e);
+		}
+	}
+
 }

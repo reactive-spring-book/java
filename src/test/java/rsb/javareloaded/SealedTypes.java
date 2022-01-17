@@ -8,33 +8,37 @@ import org.springframework.util.Assert;
 @Slf4j
 class SealedTypes {
 
-    // <1>
-    sealed interface Shape permits Oval, Polygon {
-    }
+	// <1>
+	sealed interface Shape permits Oval,Polygon {
 
-    // <2>
-    static final class Oval implements Shape {
-    }
+	}
 
-    static final class Polygon implements Shape {
-    }
+	// <2>
+	static final class Oval implements Shape {
 
-    // <3>
-    // static final class Rhombus implements Shape {}
+	}
 
-    // <4>
-    private String describeShape(Shape shape) {
-        Assert.notNull(shape, () -> "the shape should never be null!");
-        if (shape instanceof Oval)
-            return "round";
-        if (shape instanceof Polygon)
-            return "straight";
-        throw new RuntimeException("we should never get to this point!");
-    }
+	static final class Polygon implements Shape {
 
-    @Test
-    void disjointedUnionTypes() {
-        Assertions.assertEquals(describeShape(new Oval()), "round");
-        Assertions.assertEquals(describeShape(new Polygon()), "straight");
-    }
+	}
+
+	// <3>
+	// static final class Rhombus implements Shape {}
+
+	// <4>
+	private String describeShape(Shape shape) {
+		Assert.notNull(shape, () -> "the shape should never be null!");
+		if (shape instanceof Oval)
+			return "round";
+		if (shape instanceof Polygon)
+			return "straight";
+		throw new RuntimeException("we should never get to this point!");
+	}
+
+	@Test
+	void disjointedUnionTypes() {
+		Assertions.assertEquals(describeShape(new Oval()), "round");
+		Assertions.assertEquals(describeShape(new Polygon()), "straight");
+	}
+
 }
