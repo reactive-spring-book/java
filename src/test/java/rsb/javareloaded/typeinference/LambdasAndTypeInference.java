@@ -21,6 +21,7 @@ class LambdasAndTypeInference {
     void lambdas() {
         MyHandler defaultHandler = this::delegate;
         var withVar = new MyHandler() {
+
             @Override
             public String handle(String one, int two) {
                 return delegate(one, two);
