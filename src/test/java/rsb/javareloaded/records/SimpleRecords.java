@@ -19,7 +19,7 @@ class SimpleRecords {
 	}
 
 	@Test
-	void simple() {
+	void records() {
 		var customer = new Customer(2534, "Tammie");
 		var order1 = new Order(2232, 74.023);
 		var order2 = new Order(9593, 23.44);
