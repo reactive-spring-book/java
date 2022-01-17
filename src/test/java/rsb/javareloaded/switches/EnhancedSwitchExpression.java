@@ -14,7 +14,7 @@ class EnhancedSwitchExpression {
     private String respondToEmotionalState(Emotion emotion) {
         return switch (emotion) {
             case HAPPY -> "that's wonderful.";
-            case SAD -> "I'm so sorry to hear it.";
+            case SAD -> "I'm so sorry to hear that.";
         };
     }
 
