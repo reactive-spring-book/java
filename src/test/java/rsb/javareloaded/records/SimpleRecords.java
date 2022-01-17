@@ -20,7 +20,7 @@ class SimpleRecords {
 
 	@Test
 	void records() {
-		var customer = new Customer(2534, "Tammie");
+		var customer = new Customer(253, "Tammie");
 		var order1 = new Order(2232, 74.023);
 		var order2 = new Order(9593, 23.44);
 		var cos = new CustomerOrder(customer, List.of(order1, order2));
