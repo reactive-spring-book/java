@@ -9,7 +9,7 @@ class TypeInference {
 
 	@Test
 	void infer() throws Exception {
-		var map1 = Map.of("key", "value");
+		var map1 = Map.of("key", "value"); // <1>
 		Map<String, String> map2 = Map.of("key", "value");
 		Assertions.assertEquals(map2, map1); // <1>
 		var anonymousSubclass = new Object() {

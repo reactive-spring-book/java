@@ -11,7 +11,7 @@ class EnhancedSwitchExpression {
 		Assertions.assertEquals(respondToEmotionalState(Emotion.SAD), "I'm so sorry to hear that.");
 	}
 
-	private String respondToEmotionalState(Emotion emotion) {
+	private String respondToEmotionalState(Emotion emotion) { // <1>
 		return switch (emotion) {
 		case HAPPY -> "that's wonderful.";
 		case SAD -> "I'm so sorry to hear that.";

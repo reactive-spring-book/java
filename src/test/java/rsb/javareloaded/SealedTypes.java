@@ -14,7 +14,11 @@ class SealedTypes {
 	}
 
 	// <2>
-	static final class Oval implements Shape {
+	static sealed class Oval implements Shape permits Circle {
+
+	}
+
+	static final class Circle extends Oval {
 
 	}
 

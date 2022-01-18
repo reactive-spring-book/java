@@ -7,9 +7,10 @@ import org.springframework.util.StringUtils;
 
 class RecordConstructors {
 
-	record Customer(Integer id, String email) {
+	record Customer(Integer id, String email) { // <1>
 
-		Customer {
+		Customer { // <2>
+			Assert.notNull(id, () -> "the id must never be null!");
 			Assert.isTrue(StringUtils.hasText(email), () -> "the email is invalid");
 		}
 

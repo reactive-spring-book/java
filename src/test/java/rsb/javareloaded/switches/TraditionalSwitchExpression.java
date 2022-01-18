@@ -5,6 +5,13 @@ import org.junit.jupiter.api.Test;
 
 class TraditionalSwitchExpression {
 
+	enum Emotion {
+
+		// <1>
+		HAPPY, SAD
+
+	}
+
 	@Test
 	void switchExpression() {
 		Assertions.assertEquals(respondToEmotionalState(Emotion.HAPPY), "that's wonderful.");
@@ -12,23 +19,17 @@ class TraditionalSwitchExpression {
 	}
 
 	public String respondToEmotionalState(Emotion emotion) {
-		var response = "";
+		var response = ""; // <2>
 		switch (emotion) {
 		case HAPPY:
 			response = "that's wonderful.";
-			break;
+			break; // <3>
 		case SAD:
 			response = "I'm so sorry to hear that.";
 			break;
 		}
 
 		return response;
-	}
-
-	enum Emotion {
-
-		HAPPY, SAD
-
 	}
 
 }

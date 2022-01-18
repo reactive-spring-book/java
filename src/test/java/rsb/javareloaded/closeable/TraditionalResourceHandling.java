@@ -6,14 +6,16 @@ import org.junit.jupiter.api.Test;
 
 import java.io.*;
 
+import static rsb.javareloaded.closeable.Utils.error;
+
 @Slf4j
 class TraditionalResourceHandling {
 
-	private final File file = Utils.setup();
+	private final File file = Utils.setup();// <1>
 
 	@Test
 	void read() throws Exception {
-		var bufferedReader = (BufferedReader) null; // <1>
+		var bufferedReader = (BufferedReader) null; // <2>
 		try {
 			bufferedReader = new BufferedReader(new FileReader(this.file));
 			var stringBuilder = new StringBuilder();
@@ -25,10 +27,10 @@ class TraditionalResourceHandling {
 			var contents = stringBuilder.toString().trim();
 			Assertions.assertEquals(contents, Utils.CONTENTS);
 		} //
-		catch (IOException e) {
-			Utils.error(e);
+		catch (IOException e) { // <3>
+			error(e);
 		} //
-		finally {
+		finally { // <4>
 			close(bufferedReader);
 		}
 	}
@@ -39,7 +41,7 @@ class TraditionalResourceHandling {
 				reader.close();
 			} //
 			catch (IOException e) {
-				Utils.error(e);
+				error(e);
 			}
 		}
 	}

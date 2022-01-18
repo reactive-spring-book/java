@@ -35,6 +35,13 @@ public class SmartCasts {
 
 		var newPet = Math.random() < .5 ? new Cat() : new Dog();
 		var messages = new ArrayList<String>();
+
+		// <1>
+		if (newPet instanceof Cat) {
+			var cat = (Cat) newPet;
+			messages.add("the cat says " + cat.speak());
+		}
+		// <2>
 		if (newPet instanceof Cat cat) {
 			messages.add("the cat says " + cat.speak());
 		}

@@ -9,6 +9,7 @@ class MultilineStrings {
 
 	private final String instant = Instant.now().toString();
 
+	// <1>
 	private final String multilines = String.format("""
 			<html>
 			<body>
@@ -16,6 +17,7 @@ class MultilineStrings {
 			</html>
 			""", instant).trim();
 
+	// <2>
 	private final String concatenated = "<html>\n<body>\n" + "<h1> Hello, world, @ " + instant + "!</h1> </body>\n"
 			+ "</html>";
 

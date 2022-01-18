@@ -21,19 +21,21 @@ class LambdasAndTypeInference {
 
 	@Test
 	void lambdas() {
-		MyHandler defaultHandler = this::delegate;
-		var withVar = new MyHandler() {
+		MyHandler defaultHandler = this::delegate; // <1>
+		var withVar = new MyHandler() { // <2>
 
 			@Override
 			public String handle(String one, int two) {
 				return delegate(one, two);
 			}
 		};
-		var withCast = (MyHandler) this::delegate;
+		var withCast = (MyHandler) this::delegate; // <3>
 		var string = "hello";
 		var integer = 2;
-		var set = new HashSet<>(List.of(withCast.handle(string, integer), withVar.handle(string, integer),
-				defaultHandler.handle(string, integer)));
+		var set = new HashSet<>( //
+				List.of(withCast.handle(string, integer), //
+						withVar.handle(string, integer), //
+						defaultHandler.handle(string, integer)));
 		Assertions.assertEquals(set.size(), 1, "the 3 entries should all be the same, and thus deduplicated out");
 	}
 
