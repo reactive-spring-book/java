@@ -1,4 +1,4 @@
-package javareloaded;
+package rsb.javareloaded;
 
 public class Main {
 
