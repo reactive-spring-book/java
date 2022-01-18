@@ -44,7 +44,7 @@ public class SmartCasts {
 		}
 		// <2>
 		if (newPet instanceof Cat cat) {
-			messages.add("the cats says " + cat.speak());
+			messages.add("the cat says " + cat.speak());
 		}
 
 		if (newPet instanceof Dog dog) {
