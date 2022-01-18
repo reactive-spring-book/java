@@ -40,11 +40,11 @@ public class SmartCasts {
 		// <1>
 		if (newPet instanceof Cat) {
 			var cat = (Cat) newPet;
-			messages.add("the cats " + cat.speak());
+			messages.add("the cat says " + cat.speak());
 		}
 		// <2>
 		if (newPet instanceof Cat cat) {
-			messages.add("the catss says " + cat.speak());
+			messages.add("the cat says " + cat.speak());
 		}
 
 		if (newPet instanceof Dog dog) {
