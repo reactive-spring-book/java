@@ -47,7 +47,7 @@ public class SmartCastsTest {
 		}
 
 		if (newPet instanceof Dog dog) {
-			messages.add("the dos says " + dog.speak());
+			messages.add("the dog says " + dog.speak());
 		}
 
 		Assertions.assertEquals(messages.size(), 1);
