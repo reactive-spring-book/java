@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class SmartCasts {
 
@@ -34,7 +35,7 @@ public class SmartCasts {
 		}
 
 		var newPet = Math.random() < .5 ? new Cat() : new Dog();
-		var messages = new ArrayList<String>();
+		var messages = new HashSet<String>();
 
 		// <1>
 		if (newPet instanceof Cat) {
