@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 @Slf4j
-class SimpleRecords {
+class SimpleRecordsTest {
 
 	// <1>
 	record Customer(Integer id, String name) {

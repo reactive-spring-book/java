@@ -3,7 +3,7 @@ package rsb.javareloaded.switches;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class TraditionalSwitchExpression {
+class TraditionalSwitchExpressionTest {
 
 	enum Emotion {
 

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.time.Instant;
 
-class MultilineStrings {
+class MultilineStringsTest {
 
 	private final String instant = Instant.now().toString();
 

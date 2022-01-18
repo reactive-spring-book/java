@@ -3,10 +3,9 @@ package rsb.javareloaded;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 
-public class SmartCasts {
+public class SmartCastsTest {
 
 	@Test
 	void casts() {

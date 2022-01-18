@@ -9,12 +9,12 @@ import java.io.*;
 import static rsb.javareloaded.closeable.Utils.error;
 
 @Slf4j
-class TraditionalResourceHandling {
+class TraditionalResourceHandlingTest {
 
 	private final File file = Utils.setup();// <1>
 
 	@Test
-	void read() throws Exception {
+	void read() {
 		var bufferedReader = (BufferedReader) null; // <2>
 		try {
 			bufferedReader = new BufferedReader(new FileReader(this.file));

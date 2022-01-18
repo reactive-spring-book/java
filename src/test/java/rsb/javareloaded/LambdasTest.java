@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.function.Function;
 
-class Lambdas {
+class LambdasTest {
 
 	@Test
 	void lambdas() {

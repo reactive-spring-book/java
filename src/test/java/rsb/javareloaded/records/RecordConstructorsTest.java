@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
-class RecordConstructors {
+class RecordConstructorsTest {
 
 	record Customer(Integer id, String email) { // <1>
 

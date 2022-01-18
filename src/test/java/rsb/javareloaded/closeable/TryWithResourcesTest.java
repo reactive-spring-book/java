@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-class TryWithResources {
+class TryWithResourcesTest {
 
 	private final File file = Utils.setup();
 

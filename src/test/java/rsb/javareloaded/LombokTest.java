@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 @Slf4j // <1>
-public class Lombok {
+public class LombokTest {
 
 	@Data
 	@RequiredArgsConstructor

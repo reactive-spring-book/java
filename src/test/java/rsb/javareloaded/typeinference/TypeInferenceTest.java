@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 
-class TypeInference {
+class TypeInferenceTest {
 
 	@Test
 	void infer() throws Exception {

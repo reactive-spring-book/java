@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.HashSet;
 import java.util.List;
 
-class LambdasAndTypeInference {
+class LambdasAndTypeInferenceTest {
 
 	@FunctionalInterface
 	interface MyHandler {

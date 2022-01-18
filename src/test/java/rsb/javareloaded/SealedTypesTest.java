@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.util.Assert;
 
 @Slf4j
-class SealedTypes {
+class SealedTypesTest {
 
 	// <1>
 	sealed interface Shape permits Oval,Polygon {
