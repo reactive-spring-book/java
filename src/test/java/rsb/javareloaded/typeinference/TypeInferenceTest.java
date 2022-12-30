@@ -13,7 +13,7 @@ class TypeInferenceTest {
 		Map<String, String> map2 = Map.of("key", "value");
 		Assertions.assertEquals(map2, map1); // <1>
 		var anonymousSubclass = new Object() {
-			String name = "Peanut the Poodle";
+			final String name = "Peanut the Poodle";
 
 			int age = 7;
 
