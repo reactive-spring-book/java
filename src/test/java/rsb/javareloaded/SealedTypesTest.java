@@ -9,7 +9,7 @@ import org.springframework.util.Assert;
 class SealedTypesTest {
 
 	// <1>
-	sealed interface Shape permits Oval,Polygon {
+	sealed interface Shape permits Oval, Polygon {
 
 	}
 

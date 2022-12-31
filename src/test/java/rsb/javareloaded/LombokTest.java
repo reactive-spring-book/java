@@ -42,7 +42,6 @@ public class LombokTest {
 
 	@Test
 	void lombok() {// <4>
-
 		var customer = new Customer("Betty", 1);
 		log.info("the customer toString(): " + customer);
 		log.info("the name is {} and the id is {}", customer.getName(), customer.getId());
